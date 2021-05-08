@@ -3,21 +3,47 @@ import './App.css';
 // import ColorPicker from './components/ColorPicker/ColorPicker';
 // import PantingList from './components/PaintingList';
 // import paintings from './paintings.json';
-import Alert from './components/Alert/Alert.js';
-import Container from './components/Container/Container';
+// import Alert from './components/Alert/Alert.js';
+// import Container from './components/Container/Container';
+// import Counter from './components/Counter/Counter';
+// import Dropdown from './components/Dropdown/Dropdown';
+// import MyForm from './components/MyForm/MyForm';
+import authContext from './context/auth-context';
+import { Component } from 'react';
+import AppBar from './components/AppBar/AppBar';
 
-function App() {
-  return (
-    <div>
-      <Container>
+class App extends Component {
+  state = {
+    isLoggedIn: false,
+    user: { name: 'Mango' },
+    onLogIn: () => {
+      this.setState({ isLoggedIn: true });
+    },
+    onLogOut: () => {
+      this.setState({ isLoggedIn: false });
+    },
+  };
+  render() {
+    return (
+      <>
+        <authContext.Provider value={this.state}>
+          <div>
+            <AppBar />
+          </div>
+        </authContext.Provider>
+        {/* <Container> */}
+        {/* <MyForm /> */}
+        {/* <Dropdown /> */}
+        {/* <Counter /> */}
         {/* <PantingList items={paintings} /> */}
         {/* <ColorPicker options={colorPickerOptions} /> */}
-        <Alert type="small" classNames="big red" styles={{ color: '#fff' }} />
+        {/* <Alert type="small" classNames="big red" styles={{ color: '#fff' }} />
         <Alert title="Hello" type="middle" />
-        <Alert title="Hello" type="large" />
-      </Container>
-    </div>
-  );
+        <Alert title="Hello" type="large" /> */}
+        {/* </Container> */}
+      </>
+    );
+  }
 }
 
 // const colorPickerOptions = [
