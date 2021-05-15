@@ -8,29 +8,63 @@ import './App.css';
 // import Counter from './components/Counter/Counter';
 // import Dropdown from './components/Dropdown/Dropdown';
 // import MyForm from './components/MyForm/MyForm';
-import authContext from './context/auth-context';
+// import authContext from './context/auth-context';
+// import AppBar from './components/AppBar/AppBar';
+// import SignupForm from './components/SignupForm/SignupForm';
 import { Component } from 'react';
-import AppBar from './components/AppBar/AppBar';
+// import Modal from './components/Modal/Modal';
+// import IconButton from './components/IconButton/IconButton.js';
+// import { ReactComponent as AddIcon } from './icons/add.svg';
+// import SignupForm from './components/SignupForm/SignupForm';
+// import SkipEffectOnFirstRender from './components/SkipEffectOnFirstRender/SkipEffectOnFirstRender';
+// import Friends from './components/Friends/Friends';
 
 class App extends Component {
   state = {
-    isLoggedIn: false,
-    user: { name: 'Mango' },
-    onLogIn: () => {
-      this.setState({ isLoggedIn: true });
-    },
-    onLogOut: () => {
-      this.setState({ isLoggedIn: false });
-    },
+    showModal: false,
+    // isLoggedIn: false,
+    // user: { name: 'Mango' },
+    // onLogIn: () => {
+    //   this.setState({ isLoggedIn: true });
+    // },
+    // onLogOut: () => {
+    //   this.setState({ isLoggedIn: false });
+    // },
   };
+
+  toggleModal = () => {
+    this.setState(({ showModal }) => ({
+      showModal: !showModal,
+    }));
+  };
+
   render() {
+    // const { showModal } = this.state;
+
     return (
       <>
-        <authContext.Provider value={this.state}>
-          <div>
-            <AppBar />
-          </div>
-        </authContext.Provider>
+        {/* <Friends /> */}
+        {/* <SkipEffectOnFirstRender /> */}
+        {/* <SignupForm /> */}
+        {/* <Counter /> */}
+        {/* <Clock />  */}
+        {/* <IconButton onClick={this.toggleModal} aria-label="Fucking IT">
+          <AddIcon width="100" height="100" fill="#fff" />
+        </IconButton> */}
+
+        {/* {showModal && (
+          <Modal onClose={this.toggleModal}>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Molestiae, fugit architecto aperiam voluptatum optio cupiditate
+              placeat repellendus quae, at voluptates ducimus esse dolor nobis
+              excepturi. Perferendis voluptas a nulla pariatur?
+            </p>
+            <button type="button" onClick={this.toggleModal}>
+              close
+            </button>
+          </Modal>
+        )} */}
         {/* <Container> */}
         {/* <MyForm /> */}
         {/* <Dropdown /> */}
