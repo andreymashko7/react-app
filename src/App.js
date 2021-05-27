@@ -3,18 +3,20 @@ import './App.css';
 // import ColorPicker from './components/ColorPicker/ColorPicker';
 // import PantingList from './components/PaintingList';
 // import paintings from './paintings.json';
-import Alert from './components/Alert/Alert.js';
+// import Alert from './components/Alert/Alert.js';
 import Container from './components/Container/Container';
+import Counter from './components/Counter/Counter';
 
 function App() {
   return (
     <div>
       <Container>
+        <Counter />
         {/* <PantingList items={paintings} /> */}
         {/* <ColorPicker options={colorPickerOptions} /> */}
-        <Alert type="small" classNames="big red" styles={{ color: '#fff' }} />
+        {/* <Alert type="small" classNames="big red" styles={{ color: '#fff' }} />
         <Alert title="Hello" type="middle" />
-        <Alert title="Hello" type="large" />
+        <Alert title="Hello" type="large" /> */}
       </Container>
     </div>
   );
